@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+body {
+	/* background-color: hsla(28, 0%, 0%, 50%); */
+	background-color: whitesmoke;
+}
+
+header,
+nav,
+section,
+aside,
+article,
+figure,
+figcaption,
+footer,
+hgroup {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+table tr td {
+	border-radius: 5px;
+}
+
+/* none cellphone display */
+@media (min-width: 601px) {
+	#wrapper>.fixtop>.nav2 {
+		display: none;
+	}
+
+	/* switch between section h3 and header h3 */
+	.utarticle>header>h3 {
+		display: none;
+	}
+}
+
+/* cell phone display */
+@media (max-width: 600px) {
+
+	/* make side bar disappear */
+	#wrapper>#container>.content>aside {
+		display: none;
+	}
+
+	#wrapper>.fixtop>.nav1 {
+		display: none;
+	}
+
+	/* cellphone change to a different background image */
+	#wrapper>.fixtop>.flexhead {
+		background: linear-gradient(-65deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('../upload/pics/cellbackground.jpg');
+		background-size: cover;
+		height: 200px;
+	}
+
+	/* switch between section h3 and header h3 */
+	.utarticle>section>h3 {
+		display: none;
+	}
+
+	/* change iconimage and iconvideo size */
+	.utarticle>section>a>.iconimage {
+		min-width: 94%;
+		height: 200px;
+		float: none;
+
+	}
+
+	.utarticle>section>.iconimage {
+		min-width: 94%;
+		height: 200px;
+		float: none;
+	}
+
+	.utarticle>section>.iconvideo {
+		min-width: 94%;
+		height: 200px;
+		float: none;
+		margin-bottom: 10px;
+	}
+}

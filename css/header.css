@@ -1,0 +1,181 @@
+#wrapper>.fixtop {
+	position: relative;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* https://blog.prototypr.io/css-only-multi-color-backgrounds-4d96a5569a20 */
+#wrapper>.fixtop>header {
+	background: -webkit-linear-gradient(-65deg, #fa7c30 20%, rgba(0, 0, 0, 0) 20%), url('../upload/pics/background.jpg');
+	background: -o-linear-gradient(-65deg, #fa7c30 20%, rgba(0, 0, 0, 0) 20%), url('../upload/pics/background.jpg');
+	background: -moz-linear-gradient(-65deg, #fa7c30 20%, rgba(0, 0, 0, 0) 20%), url('../upload/pics/background.jpg');
+	background: linear-gradient(-65deg, #fa7c30 20%, rgba(0, 0, 0, 0) 20%), url('../upload/pics/background.jpg');
+	/* background: -webkit-linear-gradient(110deg, #fa7c30 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, url('../upload/pics/background1-1.jpg') 66%, #fa7c30 66%);
+	background: -o-linear-gradient(110deg, #fa7c30 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, url('../upload/pics/background1-1.jpg') 66%, #fa7c30 66%);
+	background: -moz-linear-gradient(110deg, #fa7c30 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, url('../upload/pics/background1-1.jpg') 66%, #fa7c30 66%); */
+	/* background: linear-gradient(130deg, #fa7c30 15%, rgba(0, 0, 0, 0) 15%), linear-gradient(-60deg, #fa7c30 22%, rgba(0, 0, 0, 0) 22%), url('../upload/pics/background1-1.jpg'); */
+
+	background-size: cover;
+	background-position: 50% 21%;
+	display: -webkit-flex;
+	display: flex;
+	height: 300px;
+	opacity: 0.96;
+	width: 100%;
+}
+
+#wrapper>.fixtop>header>h1 {
+	color: white;
+	margin: auto;
+	transition-duration: 3s;
+	cursor: pointer;
+	text-shadow: black 5px 5px 5px;
+	font-size: 35px;
+}
+
+#wrapper>.fixtop>header>h1:hover {
+	transform: translateX(-30px);
+	left: 10px;
+	text-shadow: orangered 5px 5px 5px;
+}
+
+/* 2 - navigator 1 */
+#wrapper>.fixtop>.nav1 {
+	background-color: hsl(28, 5%, 10%);
+	height: 60px;
+}
+
+#wrapper>.fixtop>.nav1 ul {
+	max-width: 1000px;
+	min-width: 640px;
+	margin: auto;
+	position: relative;
+}
+
+#wrapper>.fixtop>.nav1 li {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 5px 15px;
+	transition: all 0.8s;
+}
+
+#wrapper>.fixtop>.nav1 li:hover,
+.item_active {
+	background-color: hsla(28, 100%, 38%, 100%);
+}
+
+#wrapper>.fixtop>.nav1>ul>button {
+	border-width: 0;
+	background-color: transparent;
+	position: absolute;
+	background-image: url("../img/icons8-search-36.png");
+	background-size: 100% 100%;
+	width: 32px;
+	height: 32px;
+	top: 12px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+#wrapper>.fixtop>.nav1>ul>button:hover {
+	background-image: url("../img/icons8-search-36-orange.png");
+}
+
+#wrapper>.fixtop>.nav1 a {
+	color: white;
+	font-size: 18px;
+}
+
+/* navigator 2 for cell */
+#wrapper>.fixtop>.nav2 {
+	background-color: hsl(28, 5%, 10%);
+	height: 60px;
+}
+
+#wrapper>.fixtop>.nav2>ul {
+	max-width: 1000px;
+	min-width: 640px;
+	margin: auto;
+	position: relative;
+}
+
+.nav2>ul li {
+	list-style: none;
+	float: left;
+}
+
+#wrapper>.fixtop>.nav2>ul>.services {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 5px 20px;
+	transition: all 0.8s;
+}
+
+#wrapper>.fixtop>.nav2>ul>button {
+	border-width: 0;
+	background-color: transparent;
+	position: absolute;
+	background-image: url("../img/icons8-search-36.png");
+	background-size: 100% 100%;
+	width: 36px;
+	height: 36px;
+	top: 12px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+#wrapper>.fixtop>.nav2>ul>button:hover {
+	background-image: url("../img/icons8-search-36-orange.png");
+}
+
+#wrapper>.fixtop>.nav2 a {
+	color: white;
+	font-size: 18px;
+}
+
+#wrapper>.fixtop>.nav2>ul>.services {
+	position: relative;
+	display: inline-block;
+	min-width: 70px;
+	background-color: hsla(28, 100%, 38%, 100%);
+}
+
+#wrapper>.fixtop>.nav2>ul>.services>a>img {
+	width: 48px;
+	height: 36px;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	background-color: hsl(28, 30%, 10%);
+	min-width: 113px;
+	top: 61px;
+	left: -2px;
+}
+
+.dropdown a {
+	text-align: center;
+	padding: 10px 10px;
+	display: block;
+	/* 将a标签设置为块级标签 */
+}
+
+.dropdown a:hover {
+	background-color: hsla(28, 100%, 38%, 100%);
+}
+
+.services:hover .dropdown {
+	display: block;
+}
+
+.services:hover,
+.nav2>ul li:hover {
+	background-color: hsla(28, 100%, 38%, 100%);
+}

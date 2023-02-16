@@ -1,0 +1,114 @@
+#wrapper>#container{
+	max-width: 1000px;
+	display: -webkit-box;  
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-webkit-box-orient: vertical;
+	margin: auto;
+}
+
+/* advertisement */
+#wrapper>#container>.ad{
+	background-color: whitesmoke;
+	padding: 6px 10px;
+	position: relative;
+	border-radius: 0 0 5px 5px;
+}
+
+#wrapper>#container>.ad:hover{
+	box-shadow: black 7px 7px 7px;
+}
+
+#wrapper>#container>.ad>img{
+	margin-right: 5px;
+	position: absolute;
+	top:8px;
+}
+
+#wrapper>#container>.ad>marquee{
+	max-width: 940px;
+	margin-left: 35px;	
+	font-size: 15px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#wrapper>#container>.content{
+	display: -webkit-box;
+	display: -moz-box;
+	margin-top: 12px;
+}
+
+#wrapper>#container>.content>section{
+	max-width: 709px;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	margin-right: 6px;
+}
+
+#wrapper>#container>.content>section>.rollingpics{
+	background-color: hsla(28, 0%, 0%, 10%);
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#wrapper>#container>.content>section>.rollingpics>img{
+	width: 100%;
+	aspect-ratio: 16/8;
+	filter: grayscale(100%);
+	border-radius: 5px;
+}
+
+#wrapper>#container>.content>section>.rollingpics>img:hover{
+	box-shadow: black 7px 7px 7px;
+}
+
+#wrapper>#container>.content>section>.pager{
+	text-align: center;
+	background-color: hsla(28, 0%, 0%, 0%);
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+#wrapper>#container>.content>section>.pager>button{
+	padding: 5px 120px;
+	border: 2px solid black;
+	border-radius: 5px;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	background-color: whitesmoke;
+	box-shadow: dimgrey 2px 2px 2px;
+}
+
+#wrapper>#container>.content>section>.pager>button:hover{
+	cursor: pointer;
+}
+
+/* aside bar */
+#wrapper>#container>.content>aside{
+	max-width: 279px;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	margin-left: 6px;	
+}
+
+#wrapper>#container>.content>aside>.share{
+	background-color: whitesmoke;
+	padding: 10px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+#wrapper>#container>.content>aside>.share:hover{
+	box-shadow: black 7px 7px 7px;
+}
+
+#wrapper>#container>.content>aside>.share>img{
+	max-width: 42px;
+	border-radius: 7px;
+	margin-left: 7px;
+	margin-right: 7px;
+	box-shadow: darkgrey 2px 2px 2px;
+	cursor: pointer;
+}
