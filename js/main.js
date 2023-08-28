@@ -1,9 +1,52 @@
 window.onload = function() {
+	handleMarquee();
 	redirectFunction();
 	startImageTransition();
 	randomTableCellColor("#wrapper>#container>.content>aside>.utpanel>.content>table tr td");
 	clickShare();
 }
+
+function handleMarquee() {
+	const marquee = document.querySelectorAll('.marquee');
+	let speed = 1;
+	let lastScrollPos = 0;
+	let timer;
+	marquee.forEach(function(el) {
+		const container = el.querySelector('.inner');
+		const content = el.querySelector('.inner > *');
+		//Get total width
+		const elWidth = content.offsetWidth;
+		//Duplicate content
+		let clone = content.cloneNode(true);
+		container.appendChild(clone);
+		let progress = 1;
+
+		function loop() {
+			progress = progress - speed;
+			if (progress <= elWidth * -1) {
+				progress = 0;
+			}
+			container.style.transform = 'translateX(' + progress + 'px)';
+			container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+			window.requestAnimationFrame(loop);
+		}
+		loop();
+	});
+	window.addEventListener('scroll', function() {
+		const maxScrollValue = 12;
+		const newScrollPos = window.scrollY;
+		let scrollValue = newScrollPos - lastScrollPos;
+		if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+		else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+		speed = scrollValue;
+		clearTimeout(timer);
+		timer = setTimeout(handleSpeedClear, 10);
+	});
+
+	function handleSpeedClear() {
+		speed = 1;
+	}
+};
 
 // rolling pictures fade in fade out
 function startImageTransition() {
@@ -135,8 +178,11 @@ function loadArticles(myArticle) {
 								</header>\
 								<section class="videoWrapper">\
 									<iframe\
-									 id="indexvideo" src="https://www.youtube.com/embed/NkyMKlnTK9c">\
-									</iframe>\
+									  id="indexvideo" \
+									  src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=AustinChineseChurch"\
+									  frameborder="0"\
+									  allowfullscreen\
+									></iframe>\
 								</section>\
 								<footer></footer>\
 							</article>';

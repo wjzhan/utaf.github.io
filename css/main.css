@@ -1,5 +1,5 @@
 #wrapper>#container{
-	max-width: 1000px;
+	width: 70%;
 	display: -webkit-box;  
 	display: -moz-box;
 	-moz-box-orient: vertical;
@@ -15,21 +15,11 @@
 	border-radius: 0 0 5px 5px;
 }
 
-#wrapper>#container>.ad:hover{
-	box-shadow: black 7px 7px 7px;
-}
 
 #wrapper>#container>.ad>img{
 	margin-right: 5px;
 	position: absolute;
 	top:8px;
-}
-
-#wrapper>#container>.ad>marquee{
-	max-width: 940px;
-	margin-left: 35px;	
-	font-size: 15px;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #wrapper>#container>.content{
@@ -39,7 +29,7 @@
 }
 
 #wrapper>#container>.content>section{
-	max-width: 709px;
+	max-width: 70%;
 	-moz-box-flex: 1;
 	-webkit-box-flex: 1;
 	margin-right: 6px;
@@ -87,7 +77,7 @@
 
 /* aside bar */
 #wrapper>#container>.content>aside{
-	max-width: 279px;
+	max-width: 30%;
 	-moz-box-flex: 1;
 	-webkit-box-flex: 1;
 	margin-left: 6px;	
