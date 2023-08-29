@@ -199,7 +199,7 @@ function loadArticles(myArticle) {
 								<section class="videoWrapper">\
 									<iframe\
 									  id="indexvideo" \
-									  src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=AustinChineseChurch"\
+									  src="https://www.youtube.com/embed/nsDzlK2tl0Q?si=HU9Vx8Ic5MlZpnuY"\
 									  frameborder="0"\
 									  allowfullscreen\
 									></iframe>\
