@@ -33,6 +33,14 @@ table tr td {
 	border-radius: 5px;
 }
 
+.nodisplay{
+	display: none;
+}
+
+.blockdisplay{
+	display: flex;
+}
+
 /* none cellphone display */
 @media (min-width: 601px) {
 	#wrapper>.fixtop>.nav2 {
@@ -47,14 +55,28 @@ table tr td {
 
 /* cell phone display */
 @media (max-width: 600px) {
-
+	#wrapper>#container{
+		width: 90% !important;
+	}
+	.marquee {
+		width: 90% !important;
+		margin-left: 10% !important; 
+	}
+	#wrapper>#container>.content>section {
+		width: 100% !important;
+	}
+	
 	/* make side bar disappear */
 	#wrapper>#container>.content>aside {
 		display: none;
 	}
-
+	
 	#wrapper>.fixtop>.nav1 {
 		display: none;
+	}
+	
+	#wrapper>.fixtop>.nav2 {
+		display: flex !important;
 	}
 
 	/* cellphone change to a different background image */
@@ -88,5 +110,9 @@ table tr td {
 		height: 200px;
 		float: none;
 		margin-bottom: 10px;
+	}
+	
+	#wrapper>footer>section{
+		width: 85% !important;
 	}
 }

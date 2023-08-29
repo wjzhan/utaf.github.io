@@ -89,99 +89,81 @@
 	font-size: 18px;
 }
 
-/* navigator 2 for cell */
+/* -----navigator 2 for cell ---------- */
 #wrapper>.fixtop>.nav2 {
+	display: none;
 	background-color: hsl(28, 5%, 10%);
-	height: 60px;
+	height: 5rem;
 }
 
-#wrapper>.fixtop>.nav2>ul {
-	max-width: 1000px;
-	min-width: 640px;
-	margin: auto;
-	position: relative;
+#wrapper>.fixtop>.nav2>#cellnavicon{
+	background-color: hsla(28, 100%, 42%, 100%);
+	float:left;
+	align-items: center;
+	justify-content: left;
+	padding: 1rem 1.5rem;
 }
 
-.nav2>ul li {
-	list-style: none;
-	float: left;
-}
-
-#wrapper>.fixtop>.nav2>ul>.services {
-	display: inline-block;
-	height: 50px;
-	line-height: 50px;
-	padding: 5px 20px;
-	transition: all 0.8s;
-}
-
-#wrapper>.fixtop>.nav2>ul>button {
-	border-width: 0;
-	background-color: transparent;
-	position: absolute;
-	background-image: url("../img/icons8-search-36.png");
-	background-size: 100% 100%;
-	width: 36px;
-	height: 36px;
-	top: 12px;
-	margin-left: 15px;
+#wrapper>.fixtop>.nav2>#cellnavicon:hover{
 	cursor: pointer;
 }
 
-#wrapper>.fixtop>.nav2>ul>button:hover {
+#wrapper>.fixtop>.nav2>#cellnavicon>span{
+	position: relative;
+}
+
+#cellnavwrapper{
+	position: absolute;
+	top: 12.5em;
+	left:0em;
+	width: 40%;
+	z-index: 100;
+	background-color: hsl(28, 5%, 10%);
+	border-radius: 0 5px 5px 0;
+}
+
+#menu-collapse{
+	color: #fff;
+	display: block;
+	padding: 0.5em 1em;
+	font-size: 1.4em;
+}
+
+.cellnav-line{
+	border-bottom: 1px solid #666e75;
+}
+
+.cellnav-bg:hover{
+	background-color:  hsla(28, 100%, 42%, 100%);
+}
+
+.cellnav-url{
+	color: #fff;
+	display: block;
+	padding: 1.25em 1em;
+	font-size: 1.25em;
+	font-weight: bold;
+	position: relative;
+}
+
+#wrapper>.fixtop>.nav2>button {
+	border-width: 0;
+	background-color: transparent;
+	position: relative;
+	background-image: url("../img/icons8-search-36.png");
+	background-size: 100% 100%;
+	width: 40px;
+	height: 40px;
+	margin-left: 2em;
+	margin-top: 1.3em;
+	cursor: pointer;
+}
+
+#wrapper>.fixtop>.nav2>button:hover {
 	background-image: url("../img/icons8-search-36-orange.png");
 }
 
-#wrapper>.fixtop>.nav2 a {
-	color: white;
-	font-size: 18px;
-}
-
-#wrapper>.fixtop>.nav2>ul>.services {
-	position: relative;
-	display: inline-block;
-	min-width: 70px;
-	background-color: hsla(28, 100%, 38%, 100%);
-}
-
-#wrapper>.fixtop>.nav2>ul>.services>a>img {
-	width: 48px;
-	height: 36px;
-	margin-top: 8px;
-	margin-left: 10px;
-}
-
-.dropdown {
-	display: none;
-	position: absolute;
-	background-color: hsl(28, 30%, 10%);
-	min-width: 113px;
-	top: 61px;
-	left: -2px;
-}
-
-.dropdown a {
-	text-align: center;
-	padding: 10px 10px;
-	display: block;
-	/* 将a标签设置为块级标签 */
-}
-
-.dropdown a:hover {
-	background-color: hsla(28, 100%, 38%, 100%);
-}
-
-.services:hover .dropdown {
-	display: block;
-}
-
-.services:hover,
-.nav2>ul li:hover {
-	background-color: hsla(28, 100%, 38%, 100%);
-}
-
 .marquee {
-	background-color: rgba(0, 0, 0, 0);
 	width: 100%;
 	overflow: hidden;
 	margin-left: 5%;

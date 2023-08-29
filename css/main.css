@@ -29,7 +29,7 @@
 }
 
 #wrapper>#container>.content>section{
-	max-width: 70%;
+	width: 70%;
 	-moz-box-flex: 1;
 	-webkit-box-flex: 1;
 	margin-right: 6px;
@@ -77,7 +77,7 @@
 
 /* aside bar */
 #wrapper>#container>.content>aside{
-	max-width: 30%;
+	width: 30%;
 	-moz-box-flex: 1;
 	-webkit-box-flex: 1;
 	margin-left: 6px;	

@@ -32,19 +32,32 @@
 					</ul>
 				</nav>
 				<nav class="nav2">
-					<ul>
-						<div class="services">
-							<a href="#"><img src="../img/icons8-bullet-list-50.png" alt="menu"></a>
-							<div class="dropdown">
-								<a href="../index.html">返回首页</a>
-								<a href="activity.html">团契活动</a>
-								<a href="media.html">福音影视</a>
-								<a href="#">新生指南</a>
-								<a href="contact.html">联系我们</a>
-							</div>
-						</div>
-						<button type="submit" id="redirectBtn2"></button>
-					</ul>
+					<div id="cellnavicon">
+						<span><img src="../img/icons8-bullet-list-50.png" alt="menu"></span>
+					</div>
+					<div id="cellnavwrapper" class="nodisplay">
+						<ul style="width: 100%">
+							<li class="cellnav-line" style="display: flex; justify-content: right">
+								<a href="#" id="menu-collapse">✕</a>
+							</li>
+							<li class="cellnav-line cellnav-bg">
+								<a href="../index.html" class="cellnav-url">返回首頁</a>
+							</li>
+							<li class="cellnav-line cellnav-bg">
+								<a href="activity.html" class="cellnav-url">团契活动</a>
+							</li>
+							<li class="cellnav-line cellnav-bg">
+								<a href="media.html" class="cellnav-url">福音影视</a>
+							</li>
+							<li class="cellnav-line cellnav-bg">
+								<a href="#" class="cellnav-url">新生指南</a>
+							</li>
+							<li class="cellnav-line cellnav-bg">
+								<a href="contact.html" class="cellnav-url">联系我们</a>
+							</li>
+						</ul>
+					</div>
+					<button type="submit" id="redirectBtn2"></button>	
 				</nav>
 			</div>
 			<!-- 3-container -->
@@ -78,9 +91,10 @@
 			<!-- 4-footer -->
 			<footer>
 				<section>
-					&copy; UTAF公寓团契 /
-					<a target="_blank" href="https://icons8.com/icon/7695/search">Search</a> icon by <a target="_blank"
-						href="https://icons8.com">Icons8</a>
+					<p>
+						&copy; UTAF公寓团契. 2023.
+						all rights reserved.
+					</p>	
 				</section>
 			</footer>
 		</div>

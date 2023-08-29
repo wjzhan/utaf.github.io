@@ -2,6 +2,8 @@ window.onload = function() {
 	handleMarquee();
 	redirectFunction();
 	startImageTransition();
+	callCellNav();
+	menuCollapse();
 	randomTableCellColor("#wrapper>#container>.content>aside>.utpanel>.content>table tr td");
 	clickShare();
 }
@@ -105,6 +107,24 @@ function appShare(d) {
 	window.open(url, 'sharer', options);
 }
 
+function callCellNav() {
+	var cellicon = document.getElementById("cellnavicon");
+	cellicon.addEventListener("click", function() {
+		navwrapper = document.getElementById("cellnavwrapper");
+		navwrapper.classList.remove("nodisplay");
+		navwrapper.classList.add("blockdisplay");
+	}, false);
+}
+
+function menuCollapse() {
+	var gohome = document.getElementById("menu-collapse");
+	gohome.addEventListener("click", function() {
+		navwrapper = document.getElementById("cellnavwrapper");
+		navwrapper.classList.remove("blockdisplay");
+		navwrapper.classList.add("nodisplay");
+	}, false);
+}
+
 // cloTimeRanges
 function randomTableCellColor(s) {
 	var cells = document.querySelectorAll(s);
@@ -126,10 +146,10 @@ function randomTableCellGrey(s) {
 function redirectFunction() {
 	var url = "https://www.gotquestions.org/Chinese/";
 	document.getElementById("redirectBtn1").addEventListener("click", function() {
-		window.location.href = url;
+		window.open(url, "_blank");
 	});
 	document.getElementById("redirectBtn2").addEventListener("click", function() {
-		window.location.href = url;
+		window.open(url, "_blank");
 	});
 }
 
